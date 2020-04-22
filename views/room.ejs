@@ -1,0 +1,63 @@
+<% include partials/userHeader %>
+<div class="container" style="padding-top:80px;">
+    
+    <div class="row" >
+      <%plans.forEach(function(plan){%>
+    <div class="col s12 m6">
+        <div class="card">
+          <div class="card-image">
+            <img src="http://www.theaccordhotels.com/assets/img/pictures/roomChennaiSuperior-1.jpg">
+            <span class="card-title"><%=plan.name%></span>
+          </div>
+          <div class="card-content">
+            <p>This Plan costs you ₹<%=plan.monthlyAmount%> Monthly. The Maximum Amount that can be claimed is ₹<%=plan.maxClaim%>. The Maximum Members in this plan can be <%=plan.maxMembers%>.</p>
+          </div>
+          <div class="card-action">
+            <a href="/form">Choose</a>
+          </div>
+        </div>
+      </div>
+    <%})%>
+    </div>
+    
+    <!-- <div class="row" >
+        <div class="col s12 m6" id="premier">
+            <div class="card">
+              <div class="card-image">
+                <img src="http://www.theaccordhotels.com/assets/img/pictures/roomChennaiPremier-1.jpg">
+                <span class="card-title">Family</span>
+              </div>
+              <div class="card-content">
+                <p>This Plan costs you Rs.25000 Quarterly. The Maximum Amount that can be claimed is Rs.300000 per annum. *Terms and Coniditions
+                Apply</p>
+              </div>
+              <div class="card-action">
+                <a href="/form">Choose</a>
+              </div>
+            </div>
+        </div>
+        <div class="col s12 m6" class="deluxe">
+                <div class="card">
+                  <div class="card-image">
+                    <img src="http://www.theaccordhotels.com/assets/img/pictures/roomChennaiDeluxe-1.jpg">
+                    <span class="card-title">Supreme</span>
+                  </div>
+                  <div class="card-content">
+                    <p>This Plan costs you Rs.35000 Quarterly. The Maximum Amount that can be claimed is Rs.400000 per annum. *Terms and
+                    Coniditions Apply</p>
+                  </div>
+                  <div class="card-action">
+                    <a href="/form">Choose</a>
+                  </div>
+                </div>
+              </div>
+        
+    </div> -->
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+
+<%include partials/footer%>
